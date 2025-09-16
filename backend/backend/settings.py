@@ -1,6 +1,10 @@
 import os
 
 from pathlib import Path
+import os
+import dj_database_url
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", ".onrender.com").split(",")
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -15,7 +19,7 @@ SECRET_KEY = 'django-insecure-ep+@thk5@0_!%rui=b+4dk)jnj@33yy8=%7u_^)8*n-^67fkjk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".onrender.com,localhost,127.0.0.1"]
 
 
 # Application definition
